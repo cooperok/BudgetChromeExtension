@@ -1,0 +1,36 @@
+{
+	'expenses_groups': {    //table name
+		fields: {           //list of fields
+			id          : 'INTEGER PRIMARY KEY',
+			title       : 'TEXT'
+		}
+	},
+	'revenues_groups': {
+		fields: {
+			id          : 'INTEGER PRIMARY KEY',
+			title       : 'TEXT'
+		}
+	},
+	'expenses': {
+		fields: {
+			id          : 'INTEGER PRIMARY KEY',
+			title       : 'TEXT',
+			group_id    : 'INTEGER',
+			price       : 'REAL NOT NULL',
+			date        : 'INTEGER NOT NULL',
+			description : 'TEXT'
+		},
+		extra: ['FOREIGN KEY(group_id) REFERENCES expenses_groups(id) ON DELETE CASCADE ON UPDATE CASCADE']
+	},
+	'revenues': {
+		fields: {
+			id          : 'INTEGER PRIMARY KEY',
+			title       : 'TEXT',
+			group_id    : 'INTEGER',
+			price       : 'REAL NOT NULL',
+			date        : 'INTEGER NOT NULL',
+			description : 'TEXT'
+		},
+		extra: ['FOREIGN KEY(group_id) REFERENCES revenues_groups(id) ON DELETE CASCADE ON UPDATE CASCADE']
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"expenses" : {
+		"class_name": "ExpensesPage_class",
+		"controllers": ["expenses", "expenses_groups"]
+	},
+	"expenses_groups" : {
+		"class_name": "ExpensesGroupsPage_class",
+		"controllers": ["expenses_groups"]
+	}
+}

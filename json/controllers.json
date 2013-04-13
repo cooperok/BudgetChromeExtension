@@ -1,0 +1,8 @@
+{
+	"expenses": {
+		"class_name": "ExpensesController_class"
+	},
+	"expenses_groups": {
+		"class_name": "ExpensesGroupsController_class"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name":"Budget",
+	"version":"0.1",
+	"description":"Helps to manage your budget",
+	"background": {
+		"persistant": false
+	},
+	"browser_action": {
+		"default_title": "Manage your budget",
+		"default_icon": "img/bag48.png",
+		"default_popup": "popup.html"
+	},
+	"icons" : {
+		"16" : "img/bag16.png",
+		"48" : "img/bag48.png",
+		"128" : "img/bag128.png"
+	},
+	"web_accessible_resources": [
+		"img/*", "libs/*", "classes/*", "json/*", "scripts/*"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

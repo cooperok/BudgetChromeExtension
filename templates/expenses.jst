@@ -1,0 +1,56 @@
+<div name="expenses_list" class="groups_list"></div>
+<div>
+	<a href="" name="show">Добавить расходы</a>
+	<div name="adding_block">
+		{if Object.getLength(groups)}
+		<label>
+			<div class="l-col">
+				Название:
+			</div>
+			<div class="r-col">
+				<input name="title" type="text"/>
+			</div>
+		</label>
+		<label>
+			<div class="l-col">
+				Категория:
+			</div>
+			<div class="r-col">
+				<select name="group_id">
+					{for group in groups}
+					<option value="${group.id}">${group.title}</option>
+					{/for}
+				</select>
+			</div>
+		</label>
+		<label>
+			<div class="l-col">
+				Цена:
+			</div>
+			<div class="r-col">
+				<input name="price" type="text"/>
+			</div>
+		</label>
+		<label>
+			<div class="l-col">
+				Дата:
+			</div>
+			<div class="r-col">
+				<input name="date" type="text"/>
+				<button name="date_picker"></button>
+			</div>
+		</label>
+		<label>
+			<div class="l-col">
+				Описание:
+			</div>
+			<div class="r-col">
+				<input name="description" type="text"/>
+			</div>
+		</label>
+		<input type="button" name="add" value="Добавить"/>
+		{else}
+		<div>Нет групп расходов</div>
+		{/if}
+	</div>
+</div>

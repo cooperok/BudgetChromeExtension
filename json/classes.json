@@ -1,0 +1,17 @@
+{
+	"libs" : [
+		"trimpath.js", "mootools.js", "Singlton.js", "extend_mootools.js"
+	],
+	"classes" : [
+		"App", "SQLiteTable", "Database", "Controller", "ControllersManager", "Date", "Pages", "Page"
+	],
+	"controllers": [
+		"ExpensesController", "ExpensesGroupsController"
+	],
+	"helpers": [
+		"DatetimeHelper"
+	],
+	"pages": [
+		"ExpensesPage", "ExpensesGroupsPage"
+	]
+}

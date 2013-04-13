@@ -1,0 +1,74 @@
+{
+	'expenses_groups': {    //table name
+		fields: {           //list of fields
+			id    : {
+				type: 'INTEGER PRIMARY KEY AUTOINCREMENT'
+			},
+			title : {
+				type: 'TEXT'
+			}
+		}
+	},
+	'revenues_groups': {
+		fields: {
+			id    : {
+				type: 'INTEGER PRIMARY KEY AUTOINCREMENT'
+			},
+			title : {
+				type: 'TEXT'
+			}
+		}
+	},
+	'expenses': {
+		fields: {
+			id          : {
+				type: 'INTEGER PRIMARY KEY AUTOINCREMENT'
+			},
+			title       : {
+				type: 'TEXT'
+			},
+			group_id    : {
+				type: 'INTEGER',
+				suggest: {
+					table: 'expenses_groups',
+					field: 'id'
+				}
+			},
+			price       : {
+				type: 'REAL NOT NULL'
+			},
+			date        : {
+				type: 'INTEGER NOT NULL'
+			},
+			description : {
+				type: 'TEXT'
+			}
+		}
+	},
+	'revenues': {
+		fields: {
+			id          : {
+				type: 'INTEGER PRIMARY KEY AUTOINCREMENT'
+			},
+			title       : {
+				type: 'TEXT'
+			},
+			group_id    : {
+				type: 'INTEGER',
+				suggest: {
+					table: 'revenues_groups',
+					field: 'id'
+				}
+			},
+			price       : {
+				type: 'REAL NOT NULL'
+			},
+			date        : {
+				type: 'INTEGER NOT NULL'
+			},
+			description : {
+				type: 'TEXT'
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+body {width: 400px}
+
+.clear{clear:both}
+.hidden{display:none}
+
+.tabs{background:#bbf}
+.tabs ul{list-style:none;margin:0;padding:0;width:100%}
+.tabs li{float:left;padding:10px;cursor:pointer}
+.tabs li.active{border-left:1px solid #3b3;border-right:1px solid #3b3;background:#9f9}
+
+
+.groups_list{
+	margin: 5px 0 20px;
+}
+
+.groups_list .group{
+	padding: 10px 0 10px 5px;
+	color: #000;
+	background: -webkit-linear-gradient(top,#Efe 20%,#dfd 70%,#cfc 100%);
+}
+
+.groups_list .group .remove{
+	cursor: pointer;
+	float: right;
+	color: #d00;
+	margin-right: 10px
+}
